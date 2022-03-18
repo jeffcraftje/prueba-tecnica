@@ -1,0 +1,1 @@
+export const urlName = 'https://pokeapi.co/api/v2/pokemon/'

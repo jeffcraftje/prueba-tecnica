@@ -1,0 +1,150 @@
+body{
+    background: #EBEDEF;
+}
+.content{
+    background: #17202A;
+    text-align: center;
+    color: #fff;
+    height: 70px;
+}
+.content1{
+    width: 82%;
+    margin: 15px auto;
+}
+.titulo-card{
+    position: relative;
+    top: 8px;
+    text-transform: uppercase;
+}
+.content:hover{
+    background: #D6DBDF;
+    text-align: center;
+    color: #1B2631;
+    height: 70px;
+}
+.img-info{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+.image{
+    background: #E5E8E8;
+    width: 100%;
+}
+.perfil{
+    background: #212F3D ;
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    text-transform: uppercase;
+}
+.data{
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}
+.abi1{
+    margin: 25px auto;
+    color:  #fff;
+    line-height: 10px;
+
+}
+.abi2{
+    margin: 25px;
+    color: #ffffff;
+    line-height: 10px;
+}
+.habilidad{
+    background: #34495E;
+}
+.habis{
+    background: #273746 ; 
+    text-transform: uppercase;
+}
+.listCard{
+    margin: 15px;
+}
+.card:hover{
+    background: #34495E;
+    color: #fff;
+}
+.card-s{
+    display: flex;
+    flex-direction: row;
+    text-align: center !important;
+    height: 60px;
+}
+.card-title{
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 305x;
+    padding: 10px;
+}
+.card-titl{
+    margin-left: 85% !important;
+}
+.navs{
+    background: #17202A;
+    height: 60px;
+}
+.itemNav{
+    line-height: 35px;
+}
+.nav-link{
+    color: #fff !important;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    background: #FF6100;
+}
+.itemNav1{
+    margin-right: 5%;
+    width: 55%;
+}
+.nav-buscar{
+    width: 100%;
+}
+.nav-sarch{
+    width: 80%;
+    position: relative;
+    top: 10px;
+    height: 30px;
+}
+.btn2{
+    height: 32px;
+    position: relative;
+    top: 8px;
+    padding: 8px;
+    background: #D35400;
+    border: 2px solid #D35400 !important;
+}
+.btn2:hover{
+    background: #FF6100;
+    border: 2px solid #FF6100 !important;
+}
+.images{
+    position: relative;
+    top: -8px;
+}
+.login2{
+    display: flex;
+    flex-direction: row;
+}
+.form1{
+    width: 50%;
+    margin: 15px;
+}
+.forms{
+    margin: auto;
+    width: 85%;
+    text-align: center;
+}
+.botonLogins{
+    width: 85%;
+    background: #D35400;
+    border: 2px solid #D35400 !important;
+}
+.botonLogins:hover{
+    background: #FF6100;
+    border: 2px solid #FF6100 !important;
+}
