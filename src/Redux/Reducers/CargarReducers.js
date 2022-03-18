@@ -1,7 +1,6 @@
 import { typesPokemon } from '../types/type';
 const initialState = {
     pokemon: [],
-    buscardor: []
 }
 
 export const CargarReducers = (state = { initialState }, action) => {
@@ -16,7 +15,7 @@ export const CargarReducers = (state = { initialState }, action) => {
             }
         case typesPokemon.search:
             return {
-                buscador: [...action.payload]
+                pokemon: [...action.payload]
             }
         case typesPokemon.edit:
             return {

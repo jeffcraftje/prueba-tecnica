@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import { typesPokemon } from "../types/type";
 
@@ -80,5 +80,25 @@ export const editPokemonAsync = (name, pokemon) => {
         const docRefer = doc(db, 'data-pokemon', id)
         await updateDoc(docRefer, pokemon)
             .then(() => cardPokemonAsyn())
+    }
+}
+//buscar
+export const searchSyn = (pokemon) => {
+    return{
+        type: typesPokemon.search,
+        payload: pokemon
+    }
+}
+export const searchSync = (pokemon) => {
+    return async(dispatch) => {
+        const trearPokemon = collection(db, 'data-pokemon')
+        const q = query(trearPokemon, where("name", "==", pokemon))
+        const dato = await getDocs(q)
+        const busca = []
+        dato.forEach((docu) =>{
+            busca.push(docu.data())
+        })
+        console.log(busca)
+        dispatch(searchSyn(busca))
     }
 }

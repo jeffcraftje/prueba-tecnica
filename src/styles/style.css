@@ -148,3 +148,14 @@ body{
     background: #FF6100;
     border: 2px solid #FF6100 !important;
 }
+.login{
+    width: 50% !important;
+    margin: 15px auto !important;
+    text-align: center !important;
+}
+.google-icon{
+    width: 18%;
+}
+.google-icon1{
+    width: 18%;
+}
