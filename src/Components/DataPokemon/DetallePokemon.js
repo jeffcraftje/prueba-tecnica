@@ -1,13 +1,10 @@
 import React from 'react'
-import { Button, Image } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
+import { Image, ProgressBar } from 'react-bootstrap'
 import { useForm } from '../../Hooks/useForm'
-import { pokemonDeleAsyn } from '../../Redux/actions/actionPokemon'
+
 
 const DetallePokemon = () => {
 
-    const dispatch = useDispatch();
-    const { pokemon } = useSelector(store => store.pokemon)
     const data = JSON.parse(localStorage.getItem('pokemon'))
     console.log(data)
 
@@ -21,7 +18,7 @@ const DetallePokemon = () => {
         stats: data.stats,
         tipo: data.tipo
     })
-    const { name, peso, sprites, codigo, abilidad, altura, tipo } = values
+    const { name, peso, sprites, codigo, abilidad, altura, tipo, stats } = values
 
     return (
         <div>
@@ -70,11 +67,43 @@ const DetallePokemon = () => {
                         </div>
                     </div>
                 </div>
-                <div>
-
+                <div className="progre">
+                    <div className="image">
+                        <div className="perfil">
+                            <h1>Data Combate</h1>
+                        </div>
+                        <div className="data">
+                            <div className='habilidad'>
+                                <h1 className="habis">Peso</h1>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[0].stat.name}:</h1>
+                                    <ProgressBar variant="success" now={stats[0].base_stat} label={`${stats[0].base_stat}`} />
+                                </div>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[1].stat.name}:</h1>
+                                    <ProgressBar variant="danger" now={stats[1].base_stat} label={`${stats[1].base_stat}`} />
+                                </div>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[2].stat.name}:</h1>
+                                    <ProgressBar variant="warning" now={stats[2].base_stat} label={`${stats[2].base_stat}`} />
+                                </div>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[3].stat.name}:</h1>
+                                    <ProgressBar variant="danger" now={stats[3].base_stat} label={`${stats[3].base_stat}`} />
+                                </div>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[4].stat.name}:</h1>
+                                    <ProgressBar now={stats[4].base_stat} label={`${stats[4].base_stat}`} />
+                                </div>
+                                <div className="img-inf">
+                                    <h1 className="abi1">{stats[5].stat.name}:</h1>
+                                    <ProgressBar now={stats[5].base_stat} label={`${stats[5].base_stat}`} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <Button className="btn4" variant="danger" onClick={() => dispatch(pokemonDeleAsyn(pokemon.codigo))}>Eliminar</Button>
         </div>
     )
 }

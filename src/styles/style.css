@@ -159,3 +159,14 @@ body{
 .google-icon1{
     width: 18%;
 }
+.progre{
+    position: relative;
+    top: 555px;
+    background: #34495E !important;
+    width: 100%;
+    height: 655px;
+}
+.progress{
+    width: 70% !important;
+    margin: auto;
+}
